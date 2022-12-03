@@ -7,9 +7,9 @@
     {
         static void Main(string[] args)
         {
-            Day1.Execute();
+            //Day1.Execute();
 
-            //Day2.Execute();
+            Day2.Execute();
 
             Console.ReadKey(true);
         }
