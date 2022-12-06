@@ -15,7 +15,7 @@
 
             //Day3.Execute();
 
-            Day4.Execute();
+            //Day4.Execute();
 
             Console.ReadKey(true);
         }
