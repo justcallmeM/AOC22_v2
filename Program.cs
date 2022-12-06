@@ -3,6 +3,7 @@
     using Days._2;
     using Days._1;
     using Days._3;
+    using Days._4;
 
     internal class Program
     {
@@ -12,7 +13,9 @@
 
             //Day2.Execute();
 
-            Day3.Execute();
+            //Day3.Execute();
+
+            Day4.Execute();
 
             Console.ReadKey(true);
         }
