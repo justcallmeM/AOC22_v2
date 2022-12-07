@@ -1,4 +1,4 @@
-﻿namespace AOC22.Days._3
+﻿namespace AOC22.Days
 {
     using Constants;
     using Library;
@@ -20,7 +20,7 @@
 
             for (int i = 0; i < rucksacks.Count; i += 3)
             {
-                string sharedItemType = FindSharedItemType(rucksacks[i], rucksacks[i+1], rucksacks[i+2]);
+                string sharedItemType = FindSharedItemType(rucksacks[i], rucksacks[i + 1], rucksacks[i + 2]);
 
                 sumOfItemPriorities += GetItemTypePriority(sharedItemType);
             }
@@ -49,7 +49,7 @@
             return (int)Enum.Parse(typeof(ItemTypePriority), itemType);
         }
 
-        public static string FindSharedItemType(string firstCompartment, string secondCompartment) 
+        public static string FindSharedItemType(string firstCompartment, string secondCompartment)
         {
             string sharedItem = string.Empty;
 
@@ -82,10 +82,10 @@
 
             static string GetLongestString(string a, string b, string c)
             {
-                if(a.Length > b.Length && a.Length > c.Length)
+                if (a.Length > b.Length && a.Length > c.Length)
                 {
                     return a;
-                } 
+                }
                 else if (b.Length > a.Length && b.Length > c.Length)
                 {
                     return b;

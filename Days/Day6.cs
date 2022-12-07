@@ -1,4 +1,4 @@
-﻿namespace AOC22.Days._6
+﻿namespace AOC22.Days
 {
     using Constants;
     using Library;
@@ -29,7 +29,7 @@
                     amountOfCharacters = i + mask;
                     break;
                 }
-                    
+
             }
 
             return amountOfCharacters;

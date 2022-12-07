@@ -1,4 +1,4 @@
-﻿namespace AOC22.Days._4
+﻿namespace AOC22.Days
 {
     using Constants;
     using Library;

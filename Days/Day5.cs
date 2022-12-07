@@ -1,4 +1,4 @@
-﻿namespace AOC22.Days._5
+﻿namespace AOC22.Days
 {
     using Constants;
     using Library;
@@ -9,7 +9,7 @@
         {
             List<string> list = ReadMethods.ReadFileIntoList(InputPath.DAY5_INPUT_PATH);
 
-            List<char> alphabet = new() { 'A', 'B', 'C','D','E', 'F', 'H', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' };
+            List<char> alphabet = new() { 'A', 'B', 'C', 'D', 'E', 'F', 'H', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' };
 
             List<string> stackList = new();
 
@@ -45,9 +45,10 @@
 
             List<string> cleanAlternativeStackList = new();
 
-            foreach(string alternativeStackRow in alternativeStackList)
+            foreach (string alternativeStackRow in alternativeStackList)
             {
-                if(alternativeStackRow.Any(x => char.IsLetter(x))) {
+                if (alternativeStackRow.Any(x => char.IsLetter(x)))
+                {
                     cleanAlternativeStackList.Add(alternativeStackRow);
                 }
             }
@@ -70,7 +71,7 @@
 
             List<Stack<char>> stacks = new();
 
-            foreach(string alternativeStackRow in reversedStrings)
+            foreach (string alternativeStackRow in reversedStrings)
             {
                 Stack<char> stackToAdd = new();
 
@@ -89,7 +90,7 @@
             commands = list.Skip(indexOfEmptyLine + 1).ToList();
 
 
-            foreach(var command in commands)
+            foreach (var command in commands)
             {
                 (int, int, int) movementInfo = DigestCommandInto_Amount_From_To(command);
 
@@ -144,7 +145,7 @@
         {
             string topCrates = string.Empty;
 
-            foreach(Stack<char> stack in stacks)
+            foreach (Stack<char> stack in stacks)
             {
                 topCrates += stack.Pop();
             }

@@ -1,4 +1,4 @@
-﻿namespace AOC22.Days._1
+﻿namespace AOC22.Days
 {
     using Library;
     using Constants;
@@ -33,7 +33,7 @@
                 {
                     reindeerCalories.Add(calories);
                     calories = 0;
-                }  
+                }
             }
 
             return reindeerCalories;
@@ -65,10 +65,10 @@
                     {
                         biggestCalorie = calories[i];
                         biggestCaloriePosition = i;
-                    }  
+                    }
                 }
 
-                if(biggestCaloriePosition != null)
+                if (biggestCaloriePosition != null)
                     calories.RemoveAt((int)biggestCaloriePosition);
 
                 return biggestCalorie;

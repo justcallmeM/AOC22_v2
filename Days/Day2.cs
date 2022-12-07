@@ -1,4 +1,4 @@
-﻿namespace AOC22.Days._2
+﻿namespace AOC22.Days
 {
     using Library;
     using Constants;
@@ -112,7 +112,7 @@
 
                 static int StringToIntOfMatchOutcome(string matchOutcome)
                 {
-                    if(matchOutcome == "X")
+                    if (matchOutcome == "X")
                     {
                         return 0;
                     }

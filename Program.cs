@@ -1,11 +1,6 @@
 ﻿namespace AOC22
 {
-    using Days._2;
-    using Days._1;
-    using Days._3;
-    using Days._4;
-    using Days._5;
-    using Days._6;
+    using Days;
 
     internal class Program
     {
@@ -21,7 +16,9 @@
 
             //Day5.Execute();
 
-            Day6.Execute();
+            //Day6.Execute();
+
+            Day7.Execute();
 
             Console.ReadKey(true);
         }
