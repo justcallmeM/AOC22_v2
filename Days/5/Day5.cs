@@ -5,40 +5,6 @@
 
     public static class Day5
     {
-        //public static void Execute()
-        //{
-        //    List<string> list = ReadMethods.ReadFileIntoList(InputPath.DAY5_INPUT_PATH);
-
-        //    List<string> cratesData = new();
-
-        //    foreach (string item in list)
-        //    {
-        //        if (string.IsNullOrEmpty(item))
-        //            break;
-
-        //        cratesData.Add(item);
-        //    }
-
-        //    string stackNumbers = cratesData.Last();
-        //    cratesData.Remove(stackNumbers);
-
-        //    List<int> stackNumberPositions = new();
-
-        //    var a = stackNumbers.Split(" ").ToList();
-        //    for (int i = 0; i < a.Count; i++)
-        //    {
-        //        if (!string.IsNullOrEmpty(a[i]))
-        //        {
-        //            stackNumberPositions.Add(i);
-        //        }
-        //    }
-
-        //    List<Stack<char>> stacks = new();
-
-        //    cratesData.Reverse();
-
-        //}
-        
         public static void Execute()
         {
             List<string> list = ReadMethods.ReadFileIntoList(InputPath.DAY5_INPUT_PATH);
