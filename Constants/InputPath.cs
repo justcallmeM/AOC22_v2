@@ -10,5 +10,6 @@
         public static readonly string DAY5_INPUT_PATH = "D:\\Projektai\\AOC22\\Inputs\\inputD5.txt";
         public static readonly string DAY6_INPUT_PATH = "D:\\Projektai\\AOC22\\Inputs\\inputD6.txt";
         public static readonly string DAY7_INPUT_PATH = "D:\\Projektai\\AOC22\\Inputs\\inputD7.txt";
+        public static readonly string DAY8_INPUT_PATH = "D:\\Projektai\\AOC22\\Inputs\\inputD8.txt";
     }
 }

@@ -18,7 +18,9 @@
 
             //Day6.Execute();
 
-            Day7.Execute();
+            //Day7.Execute(); //incomplete.
+
+            Day8.Execute();
 
             Console.ReadKey(true);
         }
