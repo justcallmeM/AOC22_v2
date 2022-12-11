@@ -32,9 +32,7 @@
                 }
             }
 
-            int edges = CountEdgeTrees(treeGrid);
-
-            counter += edges;
+            counter += CountEdgeTrees(treeGrid);
 
             Console.WriteLine(counter);
         }
@@ -46,15 +44,13 @@
 
         public static bool TreeVisibleFromEdge(int[,] treeGrid, int x, int y)
         {
-            return !ThereAreHigherTreesForwards() 
-                || !ThereAreHigherTreesBackwards() 
-                || !ThereAreHigherTreesOnTheRight() 
-                || !ThereAreHigherTreesOnTheLeft();
+            return !LeftToRight() 
+                || !RightToLeft() 
+                || !BottomToTop() 
+                || !TopToBottom();
 
-            bool ThereAreHigherTreesForwards()
+            bool LeftToRight()
             {
-                int num = treeGrid[x, y];
-
                 int[] array = new int[y];
 
                 for (int i = 0; i < y; i++)
@@ -62,15 +58,13 @@
                     array[i] = treeGrid[x, i];
                 }
 
-                bool result = array.Any(z => z >= num);
+                bool result = array.Any(z => z >= treeGrid[x, y]);
 
                 return result;
             }
 
-            bool ThereAreHigherTreesBackwards()
+            bool RightToLeft()
             {
-                int num = treeGrid[x, y];
-
                 int rows = treeGrid.GetLength(1) - 1;
                 int[] array = new int[rows - y];
 
@@ -79,15 +73,13 @@
                     array[i] = treeGrid[x, rows - i];
                 }
 
-                bool result = array.Any(z => z >= num);
+                bool result = array.Any(z => z >= treeGrid[x, y]);
 
                 return result;
             }
 
-            bool ThereAreHigherTreesOnTheRight()
+            bool BottomToTop()
             {
-                int num = treeGrid[x, y];
-
                 int columns = treeGrid.GetLength(0) - 1;
                 int[] array = new int[columns - x];
 
@@ -96,15 +88,13 @@
                     array[i] = treeGrid[columns - i, y];
                 }
 
-                bool result = array.Any(z => z >= num);
+                bool result = array.Any(z => z >= treeGrid[x, y]);
 
                 return result;
             }
 
-            bool ThereAreHigherTreesOnTheLeft()
+            bool TopToBottom()
             {
-                int num = treeGrid[x, y];
-
                 int[] array = new int[x];
 
                 for (int i = 0; i < x; i++)
@@ -112,7 +102,7 @@
                     array[i] = treeGrid[i, y];
                 }
 
-                bool result = array.Any(z => z >= num);
+                bool result = array.Any(z => z >= treeGrid[x, y]);
 
                 return result;
             }
